@@ -5,8 +5,8 @@
   "main": "server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier \"./client/src/**/*.{js.html}\" --write",
-    "lint": "eslint \"./server/**/*.{js.jsx}\" --quiet",
+    "format": "prettier \"client/src/**/*.{js.html}\" --write",
+    "lint": "eslint \"client/src/**/*.{js.jsx}\" --quiet",
     "client-install": "npm install --prefix client",
     "start": "node server/server.js",
     "server": "nodemon server/server.js",
