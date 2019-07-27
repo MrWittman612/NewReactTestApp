@@ -1,0 +1,12 @@
+{
+  "name": "NewReactTestApp",
+  "version": "1.0.0",
+  "description": "This Is a play ground Full Stack App for me to test package func Built with express react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Chad Wittman",
+  "license": "MIT"
+}
