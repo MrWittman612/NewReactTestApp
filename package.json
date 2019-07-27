@@ -5,15 +5,14 @@
   "main": "server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier \"scr/**/*.{js.html}\" --write",
-    "lint": "eslint \"client/scr/**/*.{js.jsx}\" --quiet",
+    "format": "prettier \"client/src/**/*.{js.html}\" --write",
+    "lint": "eslint \"client/src/**/*.{js.jsx}\" --quiet",
     "client-install": "npm install --prefix client",
     "start": "node server/server.js",
     "server": "nodemon server/server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "npm install && cd client && npm install",
-    "dev-with-parcer": "parcel src/index.html",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
@@ -34,6 +33,13 @@
     "passport-jwt": "^4.0.0"
   },
   "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-standard": "^4.0.0",
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2"
   }
