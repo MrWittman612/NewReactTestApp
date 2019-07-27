@@ -1,12 +1,12 @@
 {
-  "name": "NewReactTestApp",
+  "name": "newreacttestapp",
   "version": "1.0.0",
   "description": "This Is a play ground Full Stack App for me to test package func Built with express react",
   "main": "server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier \"scr/**/*.{js.html}\" --write",
-    "lint": "eslint \"scr/**/*.{js.jsx}\" --quiet",
+    "lint": "eslint \"client/scr/**/*.{js.jsx}\" --quiet",
     "client-install": "npm install --prefix client",
     "start": "node server/server.js",
     "server": "nodemon server/server.js",
@@ -34,7 +34,6 @@
     "passport-jwt": "^4.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.1.0",
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2"
   }
