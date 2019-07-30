@@ -1,40 +1,8 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Redirect,
-  withRouter
-} from "react-router-dom";
+import { Redirect, withRouter } from "react-router-dom";
+import { AuthExample } from "./AuthExample";
 
-////////////////////////////////////////////////////////////
-// 1. Click the public page
-// 2. Click the protected page
-// 3. Log in
-// 4. Click the back button, note the URL each time
-
-function AuthExample() {
-  return (
-    <Router>
-      <div>
-        <AuthButton />
-        <ul>
-          <li>
-            <Link to="/public">Public Page</Link>
-          </li>
-          <li>
-            <Link to="/protected">Protected Page</Link>
-          </li>
-        </ul>
-        <Route path="/public" component={Public} />
-        <Route path="/login" component={Login} />
-        <PrivateRoute path="/protected" component={Protected} />
-      </div>
-    </Router>
-  );
-}
-
-const fakeAuth = {
+export const fakeAuth = {
   isAuthenticated: false,
   authenticate(cb) {
     this.isAuthenticated = true;
@@ -46,7 +14,7 @@ const fakeAuth = {
   }
 };
 
-const AuthButton = withRouter(({ history }) =>
+export const AuthButton = withRouter(({ history }) =>
   fakeAuth.isAuthenticated ? (
     <p>
       Welcome!{" "}
@@ -63,35 +31,15 @@ const AuthButton = withRouter(({ history }) =>
   )
 );
 
-function PrivateRoute({ component: Component, ...rest }) {
-  return (
-    <Route
-      {...rest}
-      render={props =>
-        fakeAuth.isAuthenticated ? (
-          <Component {...props} />
-        ) : (
-          <Redirect
-            to={{
-              pathname: "/login",
-              state: { from: props.location }
-            }}
-          />
-        )
-      }
-    />
-  );
-}
-
-function Public() {
+export function Public() {
   return <h3>Public</h3>;
 }
 
-function Protected() {
+export function Protected() {
   return <h3>Protected</h3>;
 }
 
-class Login extends Component {
+export class Login extends Component {
   state = { redirectToReferrer: false };
 
   login = () => {

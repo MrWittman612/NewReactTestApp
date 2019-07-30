@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Nested from "./pages/mockRoutes/nestedR";
-import Protected from "./pages/mockRoutes/RedirectR";
+import Protected from "./pages/mockRoutes/AuthExample";
 
 import "./App.css";
 
