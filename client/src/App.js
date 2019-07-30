@@ -1,6 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+import Nested from "./pages/mockRoutes/nestedR";
+import Protected from "./pages/mockRoutes/RedirectR";
+
 import "./App.css";
 
 function Index() {
@@ -30,12 +33,20 @@ function App() {
             <li>
               <Link to="/users">Users</Link>
             </li>
+            <li>
+              <Link to="/nested">Nested routes</Link>
+            </li>
+            <li>
+              <Link to="/redirect">Redirected routes</Link>
+            </li>
           </ul>
         </nav>
 
         <Route path="/" component={Index} />
-        <Route path="/" component={About} />
-        <Route path="/" component={Users} />
+        <Route path="/about" component={About} />
+        <Route path="/users" component={Users} />
+        <Route path="/nested" component={Nested} />
+        <Route exact path="/redirect" component={Protected} />
       </div>
     </Router>
   );
