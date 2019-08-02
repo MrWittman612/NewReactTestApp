@@ -7,7 +7,7 @@ import { PrivateRoute } from "./PrivateRoute";
 // 2. Click the protected page
 // 3. Log in
 // 4. Click the back button, note the URL each time
-export function AuthExample() {
+const AuthExample = () => {
   return (
     <Router>
       <div>
@@ -26,4 +26,6 @@ export function AuthExample() {
       </div>
     </Router>
   );
-}
+};
+
+export default AuthExample;
