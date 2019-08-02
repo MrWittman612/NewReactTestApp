@@ -16,14 +16,14 @@ mongoose
   .then(() => console.log("mongoDB is connected"))
   .catch(err => console.log(err));
 
-
-
 // app.use(passport.initialize());
 
 // require("./auth/passport")(passport);
 
 // this is not right fix please
 // require("./auth/google")(passport);
+
+app.use("/api/users", require("./routes/api/users"));
 
 // code for Heroku post build
 if (process.env.NODE_ENV === "production") {
