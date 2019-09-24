@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { AuthButton, Public, Login, Protected } from "./RedirectR";
-import { PrivateRoute } from "./PrivateRoute";
+import PrivateRoute from "./PrivateRoute";
 ////////////////////////////////////////////////////////////
 // 1. Click the public page
 // 2. Click the protected page

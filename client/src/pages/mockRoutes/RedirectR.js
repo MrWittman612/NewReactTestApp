@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect, withRouter } from "react-router-dom";
-import { AuthExample } from "./AuthExample";
+import AuthExample from "./AuthExample";
 
 export const fakeAuth = {
   isAuthenticated: false,
